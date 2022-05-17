@@ -96,9 +96,12 @@ ZSH_THEME="agnoster"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-source $ZSH/oh-my-zsh.sh
 alias src="source ~/.zshrc"
-alias ls="lsd"
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 plugins=(
     git
@@ -106,6 +109,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+source $ZSH/oh-my-zsh.sh
 
 case ${SOLARIZED_THEME:-light} in
     light) CURRENT_FG='white';;
