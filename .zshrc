@@ -105,6 +105,12 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+case ${SOLARIZED_THEME:-light} in
+    light) CURRENT_FG='white';;
+    *)     CURRENT_FG='black';;
+esac
+
 prompt_context() {
   # Custom (Random emoji)
   emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🚦" "🌙")
