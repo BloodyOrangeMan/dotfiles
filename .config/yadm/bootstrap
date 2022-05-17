@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 system_type=$(uname -s)
 
 if [ "$system_type" = "Linux" ]; then
@@ -7,17 +6,7 @@ if [ "$system_type" = "Linux" ]; then
   if ! command -v zsh > /dev/null 2>&1; then
     echo "Installing zsh..."
     sudo apt install zsh
-#   if [ ! -f ${HOME}/.oh-my-zsh ]; then
-#     echo "Installing oh-my-zsh..."
-#     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# #   elif ! command -v nvim > /dev/null 2>&1; then
-# #     echo "Installing neovim..."
-# #     sudo apt install neovim
-# #     # sudo apt install python-neovim
-# #     # sudo apt install python3-neovim
-# #     echo "Installing neovim plugins with vim-plug..."
-# #     nvim "+PlugUpdate" "+PlugClean!" "+PlugUpdate" "+qall"
-#   fi
+  fi
   if ! command -v lf > /dev/null 2>&1; then
     echo "Installing lf"
     cd /tmp
@@ -33,5 +22,9 @@ if [ "$system_type" = "Linux" ]; then
     sudo dpkg -i lsd-musl_0.21.0_amd64.deb
     cd ~
   fi
+  cd ~/ohmyzsh/plugins
+  git clone https://github.com/zsh-users/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+  echo "All packages are installed."
+  cd ~
 fi
-    echo "All packages are installed."
