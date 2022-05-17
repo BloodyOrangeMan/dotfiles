@@ -98,6 +98,7 @@ ZSH_THEME="agnoster"
 # Example aliases
 source $ZSH/oh-my-zsh.sh
 alias src="source ~/.zshrc"
+alias ls="lsd"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 plugins=(
     git
