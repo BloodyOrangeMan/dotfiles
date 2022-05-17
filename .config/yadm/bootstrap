@@ -27,4 +27,5 @@ if [ "$system_type" = "Linux" ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
   echo "All packages are installed."
   cd ~
+  sudo chsh -s $(which zsh)
 fi
