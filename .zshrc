@@ -119,7 +119,7 @@ prompt_context() {
   # Custom (Random emoji)
   emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🚦" "🌙")
   RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
-  prompt_segment cyan blue "${emojis[$RAND_EMOJI_N]} "
+  prompt_segment black blue "${emojis[$RAND_EMOJI_N]} "
 }
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
